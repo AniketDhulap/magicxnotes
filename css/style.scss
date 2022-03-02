@@ -1,0 +1,421 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+$mainColor:#F6F6F6;
+$secondaryColor:#5e5e5e;
+$thirdColor:#0075ff;
+$fontColor:#6B6B6B;
+
+
+$transition:0.2s all ease-out;
+
+.mainBox {
+  display: flex;
+
+}
+
+.leftBox {
+  padding: 0.2rem;
+  // padding: 4rem 0rem;
+  background-color: $mainColor;
+  width: 30vw !important;
+  min-height: 100vh;
+  position: fixed;
+
+  // min-height: 100%;
+  // background-color: red;
+
+  .logoBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    // background-color: blue;
+
+    .logoText {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #464646;
+      text-decoration: none;
+
+      .xText {
+        font-family: 'Forte';
+        color: #E10B0B;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  // .inputMainBox {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   // height: 100vh !important;
+  // }
+
+  .inputNotesBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .formItem {
+      // width: 100vw;
+
+      div {
+        margin: 3rem;
+      }
+
+
+      .inputBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        textarea {
+          font-size: 1.8rem;
+          resize: none;
+
+        }
+
+        input {
+          font-size: 2rem;
+        }
+
+        .inputNotes {
+          background-color: #ffffff;
+          padding: 1.1rem;
+          // margin: 1rem;
+          border: 1px solid #ECECEC;
+          border-radius: 2rem;
+          width: 100%;
+          // font-size: 2rem;
+          box-shadow: 2px 7px 15px #E5E5E5;
+
+          &:hover,
+          &:focus {
+            transform: scale(1.009);
+            // transition: 0.16s all ease;
+            outline: 0.15rem solid #fff;
+          }
+
+          // &:focus {
+          //   outline: 0.15rem solid #fff;
+          // }
+        }
+      }
+
+      .addFavBox,
+      .saveBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .saveNoteBtn {
+          font-size: 1.8rem;
+          color: #EDEDED;
+          font-weight: 500;
+          padding: 1rem 4rem;
+          // width: 40%;
+          border: 0 solid #707070;
+          border-radius: 3rem;
+          background-color: #5E5E5E;
+          box-shadow: 0.2rem 0.7rem 1.5rem #E5E5E5;
+
+          &:hover,
+          &:active {
+            background-color: $thirdColor;
+            color: #ffffff;
+            transform: scale(1.015);
+            transform: 0.06s;
+          }
+        }
+      }
+
+      .addFavBox {
+        label {
+          font-size: 1.6rem;
+          font-weight: bold;
+          color: #8B8B8B;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.rightBox {
+  margin-bottom: 10vh;
+  width: 70vw;
+  margin-left: 30vw !important;
+
+  .topRightBox {
+    min-height: 10vh;
+    display: flex;
+    background-color: #ffffff;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+
+    .filterBox {
+      .filterButtons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0.06rem solid $secondaryColor;
+        border-radius: 3rem;
+
+
+        .fBtn {
+          // background-color: $secondaryColor;
+
+
+          &:focus,
+          &:active {
+            background-color: $secondaryColor;
+            // background-color: #123c6c;
+            // border: 0.0rem solid $secondaryColor;
+            transition: 0.1s all ease;
+          }
+        }
+
+        button {
+          font-size: 1.4rem;
+          border-radius: 4rem;
+          // background-color: $secondaryColor;
+          // margin: 0rem;
+        }
+
+        .allBtn {
+          padding: 0.05rem 1rem 0.05rem 0.6rem;
+          // background-color: $mainColor;
+
+          &:focus,
+          &:active {
+            color: #ffffff;
+            z-index: 1;
+          }
+        }
+
+        .starBtn {
+          padding: 0.05rem 1rem 0.05rem 1.4rem;
+          color: $secondaryColor;
+          margin-left: -0.8rem;
+
+          &:focus,
+          &:active {
+            color: #FFB532;
+          }
+        }
+      }
+    }
+
+    .navigator {
+      display: flex;
+      justify-content: space-evenly;
+      // background-color: red;
+      width: 1vw;
+
+    }
+
+    .topElement {
+      .navBtn {
+        .navIcons {
+          color: #5e5e5e;
+        }
+      }
+
+      .search {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background-color: $mainColor;
+        border-radius: 2rem;
+        padding: 0.2rem 1rem;
+        line-height: 3rem;
+
+        input {
+          width: 25vw;
+          border: none;
+          font-size: 1.6rem;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .searchElement {
+          margin: 0.2rem;
+          background-color: $mainColor;
+
+          .searchIcon {
+            color: #5e5e5e;
+          }
+
+        }
+      }
+
+      .topButtons {
+        font-size: 1.8rem;
+        font-weight: 100;
+        border: none;
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  .contentBox {
+    .contentHeader {
+      min-height: 15vh;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      padding-left: 10vw;
+      position: sticky;
+      top: 10vh;
+      // border: 2px solid red;
+
+
+
+      h1 {
+        font-weight: 600;
+        color: $fontColor;
+      }
+    }
+
+    .contentBody {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      // transition: $transition;
+      .nothingNote {
+        color: rgba(226, 17, 17, 0.2);
+        font-size: 1.8rem;
+      }
+
+      .cardBox {
+        background-color: #3C266506;
+        border-radius: 2rem;
+        padding: 2rem 0rem 0rem 2rem;
+        margin: 2rem;
+        box-sizing: border-box;
+        width: 250px;
+        height: 100%;
+        border: 0.1rem solid $mainColor;
+        box-shadow: 0.4rem 0.5rem 0.8rem #ececec;
+        transition: $transition;
+
+        // min-width: 90%;
+        .stared {
+          display: flex;
+          justify-content: space-between;
+          margin: 0rem 1.5rem 0rem 0rem;
+          font-size: 2.2rem;
+          color: $fontColor;
+          font-weight: bold;
+
+          i {
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+          }
+
+          .Stared {
+            color: gold;
+          }
+
+          .UnStared {
+            visibility: hidden;
+          }
+        }
+
+        .mainNote {
+          padding-right: 2rem;
+
+          .heading {
+            margin-top: 1rem;
+            color: #727272;
+            font-size: 1.8rem;
+          }
+
+        }
+
+        .notes {
+          color: #878787;
+          font-size: 1.85rem;
+
+
+          pre {
+            overflow-x: auto;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+            font-family: 'Roboto', sans-serif;
+
+          }
+        }
+
+        .deleteBtn {
+          float: right;
+
+          button {
+            border: none;
+            border-radius: 2rem 0rem 2rem 0rem;
+          }
+
+          i {
+            font-size: 1.6rem;
+            padding: 1.5rem;
+            border-radius: 2rem 0rem 2rem 0rem;
+            background-color: $thirdColor;
+            color: #ffffff;
+
+            &:hover,
+            &:focus {
+              background-color: rgb(194, 26, 26);
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:576px) {
+  .cardBox {
+    width: 80% !important;
+    transition: $transition;
+  }
+}
+
+@media (max-width:768px) {
+
+  .mainBox {
+    flex-direction: column;
+
+    .leftBox {
+      width: 100% !important;
+      position: relative !important;
+    }
+
+    .rightBox {
+      width: 100% !important;
+      margin-left: 0rem !important;
+    }
+  }
+}

@@ -1,0 +1,242 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; }
+
+html {
+  font-size: 62.5%; }
+
+.mainBox {
+  display: flex; }
+
+.leftBox {
+  padding: 0.2rem;
+  background-color: #F6F6F6;
+  width: 30vw !important;
+  min-height: 100vh;
+  position: fixed; }
+  .leftBox .logoBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem; }
+    .leftBox .logoBox .logoText {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #464646;
+      text-decoration: none; }
+      .leftBox .logoBox .logoText .xText {
+        font-family: 'Forte';
+        color: #E10B0B;
+        font-size: 3rem; }
+  .leftBox .inputNotesBox {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .leftBox .inputNotesBox .formItem div {
+      margin: 3rem; }
+    .leftBox .inputNotesBox .formItem .inputBox {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .leftBox .inputNotesBox .formItem .inputBox textarea {
+        font-size: 1.8rem;
+        resize: none; }
+      .leftBox .inputNotesBox .formItem .inputBox input {
+        font-size: 2rem; }
+      .leftBox .inputNotesBox .formItem .inputBox .inputNotes {
+        background-color: #ffffff;
+        padding: 1.1rem;
+        border: 1px solid #ECECEC;
+        border-radius: 2rem;
+        width: 100%;
+        box-shadow: 2px 7px 15px #E5E5E5; }
+        .leftBox .inputNotesBox .formItem .inputBox .inputNotes:hover, .leftBox .inputNotesBox .formItem .inputBox .inputNotes:focus {
+          transform: scale(1.009);
+          outline: 0.15rem solid #fff; }
+    .leftBox .inputNotesBox .formItem .addFavBox,
+    .leftBox .inputNotesBox .formItem .saveBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .leftBox .inputNotesBox .formItem .addFavBox .saveNoteBtn,
+      .leftBox .inputNotesBox .formItem .saveBtn .saveNoteBtn {
+        font-size: 1.8rem;
+        color: #EDEDED;
+        font-weight: 500;
+        padding: 1rem 4rem;
+        border: 0 solid #707070;
+        border-radius: 3rem;
+        background-color: #5E5E5E;
+        box-shadow: 0.2rem 0.7rem 1.5rem #E5E5E5; }
+        .leftBox .inputNotesBox .formItem .addFavBox .saveNoteBtn:hover, .leftBox .inputNotesBox .formItem .addFavBox .saveNoteBtn:active,
+        .leftBox .inputNotesBox .formItem .saveBtn .saveNoteBtn:hover,
+        .leftBox .inputNotesBox .formItem .saveBtn .saveNoteBtn:active {
+          background-color: #0075ff;
+          color: #ffffff;
+          transform: scale(1.015);
+          transform: 0.06s; }
+    .leftBox .inputNotesBox .formItem .addFavBox label {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #8B8B8B;
+      margin-left: 0.5rem; }
+
+.rightBox {
+  margin-bottom: 10vh;
+  width: 70vw;
+  margin-left: 30vw !important; }
+  .rightBox .topRightBox {
+    min-height: 10vh;
+    display: flex;
+    background-color: #ffffff;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0; }
+    .rightBox .topRightBox .filterBox .filterButtons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0.06rem solid #5e5e5e;
+      border-radius: 3rem; }
+      .rightBox .topRightBox .filterBox .filterButtons .fBtn:focus, .rightBox .topRightBox .filterBox .filterButtons .fBtn:active {
+        background-color: #5e5e5e;
+        transition: 0.1s all ease; }
+      .rightBox .topRightBox .filterBox .filterButtons button {
+        font-size: 1.4rem;
+        border-radius: 4rem; }
+      .rightBox .topRightBox .filterBox .filterButtons .allBtn {
+        padding: 0.05rem 1rem 0.05rem 0.6rem; }
+        .rightBox .topRightBox .filterBox .filterButtons .allBtn:focus, .rightBox .topRightBox .filterBox .filterButtons .allBtn:active {
+          color: #ffffff;
+          z-index: 1; }
+      .rightBox .topRightBox .filterBox .filterButtons .starBtn {
+        padding: 0.05rem 1rem 0.05rem 1.4rem;
+        color: #5e5e5e;
+        margin-left: -0.8rem; }
+        .rightBox .topRightBox .filterBox .filterButtons .starBtn:focus, .rightBox .topRightBox .filterBox .filterButtons .starBtn:active {
+          color: #FFB532; }
+    .rightBox .topRightBox .navigator {
+      display: flex;
+      justify-content: space-evenly;
+      width: 1vw; }
+    .rightBox .topRightBox .topElement .navBtn .navIcons {
+      color: #5e5e5e; }
+    .rightBox .topRightBox .topElement .search {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      background-color: #F6F6F6;
+      border-radius: 2rem;
+      padding: 0.2rem 1rem;
+      line-height: 3rem; }
+      .rightBox .topRightBox .topElement .search input {
+        width: 25vw;
+        border: none;
+        font-size: 1.6rem; }
+        .rightBox .topRightBox .topElement .search input:focus {
+          outline: none; }
+      .rightBox .topRightBox .topElement .search .searchElement {
+        margin: 0.2rem;
+        background-color: #F6F6F6; }
+        .rightBox .topRightBox .topElement .search .searchElement .searchIcon {
+          color: #5e5e5e; }
+    .rightBox .topRightBox .topElement .topButtons {
+      font-size: 1.8rem;
+      font-weight: 100;
+      border: none;
+      background-color: #ffffff; }
+  .rightBox .contentBox .contentHeader {
+    min-height: 15vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding-left: 10vw;
+    position: sticky;
+    top: 10vh; }
+    .rightBox .contentBox .contentHeader h1 {
+      font-weight: 600;
+      color: #6B6B6B; }
+  .rightBox .contentBox .contentBody {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .rightBox .contentBox .contentBody .nothingNote {
+      color: rgba(226, 17, 17, 0.2);
+      font-size: 1.8rem; }
+    .rightBox .contentBox .contentBody .cardBox {
+      background-color: #3C266506;
+      border-radius: 2rem;
+      padding: 2rem 0rem 0rem 2rem;
+      margin: 2rem;
+      box-sizing: border-box;
+      width: 250px;
+      height: 100%;
+      border: 0.1rem solid #F6F6F6;
+      box-shadow: 0.4rem 0.5rem 0.8rem #ececec;
+      transition: 0.2s all ease-out; }
+      .rightBox .contentBox .contentBody .cardBox .stared {
+        display: flex;
+        justify-content: space-between;
+        margin: 0rem 1.5rem 0rem 0rem;
+        font-size: 2.2rem;
+        color: #6B6B6B;
+        font-weight: bold; }
+        .rightBox .contentBox .contentBody .cardBox .stared i {
+          font-size: 1.4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+        .rightBox .contentBox .contentBody .cardBox .stared .Stared {
+          color: gold; }
+        .rightBox .contentBox .contentBody .cardBox .stared .UnStared {
+          visibility: hidden; }
+      .rightBox .contentBox .contentBody .cardBox .mainNote {
+        padding-right: 2rem; }
+        .rightBox .contentBox .contentBody .cardBox .mainNote .heading {
+          margin-top: 1rem;
+          color: #727272;
+          font-size: 1.8rem; }
+      .rightBox .contentBox .contentBody .cardBox .notes {
+        color: #878787;
+        font-size: 1.85rem; }
+        .rightBox .contentBox .contentBody .cardBox .notes pre {
+          overflow-x: auto;
+          white-space: pre-wrap;
+          white-space: -moz-pre-wrap;
+          white-space: -pre-wrap;
+          white-space: -o-pre-wrap;
+          word-wrap: break-word;
+          font-family: 'Roboto', sans-serif; }
+      .rightBox .contentBox .contentBody .cardBox .deleteBtn {
+        float: right; }
+        .rightBox .contentBox .contentBody .cardBox .deleteBtn button {
+          border: none;
+          border-radius: 2rem 0rem 2rem 0rem; }
+        .rightBox .contentBox .contentBody .cardBox .deleteBtn i {
+          font-size: 1.6rem;
+          padding: 1.5rem;
+          border-radius: 2rem 0rem 2rem 0rem;
+          background-color: #0075ff;
+          color: #ffffff; }
+          .rightBox .contentBox .contentBody .cardBox .deleteBtn i:hover, .rightBox .contentBox .contentBody .cardBox .deleteBtn i:focus {
+            background-color: #c21a1a;
+            color: #ffffff; }
+
+@media (max-width: 576px) {
+  .cardBox {
+    width: 80% !important;
+    transition: 0.2s all ease-out; } }
+
+@media (max-width: 768px) {
+  .mainBox {
+    flex-direction: column; }
+    .mainBox .leftBox {
+      width: 100% !important;
+      position: relative !important; }
+    .mainBox .rightBox {
+      width: 100% !important;
+      margin-left: 0rem !important; } }

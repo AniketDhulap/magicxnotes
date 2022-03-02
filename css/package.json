@@ -1,0 +1,19 @@
+{
+  "name": "magicx",
+  "version": "1.0.0",
+  "description": "MagicX Notes App",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass style.scss style.css -w"
+  },
+  "keywords": [
+    "MagicX",
+    "Notes",
+    "Aniket"
+  ],
+  "author": "Aniket Dhulap",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.0"
+  }
+}

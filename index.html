@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="" content="" />
+  <title>MagicX</title>
+  <meta name="author" content="Aniket Dhulap" />
+  <meta name="description" content="MagicX Notes" />
+  <meta name="keyword" content="MagicX, aniket, dhulap, notes" />
+  <meta name="copyright" content="All Rights reserved to MagicX" />
+  <!-- Bootstrap link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- font Awesome link -->
+  <script src="https://kit.fontawesome.com/a5edecf5a9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <main class="mainBox">
+    <div class="leftBox">
+      <div class="logoBox">
+        <a class="logoText" href="#">Magic<span class="xText">X</span></a>
+      </div>
+      <div class="inputNotesBox">
+        <div class="formItem">
+          <div class="inputBox">
+            <input type="text" placeholder="Add Title..." class="inputNotes" id="addTitle" autofocus>
+          </div>
+          <div class="inputBox">
+            <textarea id="addNote" name="notes" cols="30" rows="8" class="inputNotes"
+              placeholder="Add a Notes..."></textarea>
+          </div>
+          <div class="addFavBox">
+            <input type="checkbox" class="checkBox" id="favClick">
+            <label for="favClick">Add to Favourite</label>
+          </div>
+          <div class="saveBtn">
+            <button class="saveNoteBtn" id="saveButton" onclick="addNote();" type="button">Save Note</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rightBox">
+      <div class="topRightBox">
+        <div class="navigator topElement">
+          <!-- <button class="topButtons navBtn" onclick="backBtn();"><i class="fas fa-chevron-left navIcons"></i></button> -->
+          <button class="topButtons navBtn" onclick="refreshBtn();"><i class="fas fa-redo navIcons"></i></button>
+          <!-- <button class="topButtons navBtn" onclick="forwardBtn();"><i
+              class="fas fa-chevron-right navIcons"></i></button> -->
+        </div>
+        <div class="searchBox topElement">
+          <div class="search">
+            <button class="topButtons searchElement"><i class="fas fa-search searchIcon"></i></button>
+            <input type="text" class="searchElement" placeholder="Search Notes...">
+            <button class="topButtons searchElement"><i class="fas fa-long-arrow-alt-right searchIcon"></i></button>
+          </div>
+        </div>
+        <div class="filterBox topElement">
+          <div class="filterButtons">
+            <button class="topButtons fBtn allBtn"><b>ALL</b></button>
+            <button class="topButtons fBtn starBtn"><i class="fas fa-star"></i></button>
+          </div>
+        </div>
+        <div class="deleteAllBtn topElement">
+          <button class="topButtons" onclick="trash();"><i class="fas fa-trash-alt"></i></button>
+        </div>
+      </div>
+      <div class="contentBox">
+        <div class="contentHeader">
+          <h1>All Notes</h1>
+        </div>
+        <div class="contentBody" id="contentBody">
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Js link -->
+  <script src="js/index.js"></script>
+  <!-- bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
